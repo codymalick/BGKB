@@ -1,0 +1,22 @@
+BGKB
+====
+Version .01
+Battleground Killing Blow
+WoW Add-On for tracking killstreaks, playing sounds upon killing players, HKs, and Death.
+
+To Install:
+1. Copy BGKB folder to WoW Add-on Directory (usually C:\Program Files\World of Warcraft\Interface\Addons)
+2. Login to WoW
+3. Click Add-Ons in character select
+4. Check BGKB
+5. Login and have fun!
+
+Version .01
+Basic Add-on functions work. On killing anything, sound clips play. Currently, no sound clips included in git. Planning on adding default game sounds for easy installation and use. 
+
+Current functionality:
+  Console log of each killing blow
+  Kill streak counter (Works on anything, adding player only functionality later)
+  Death streak counter (ends after getting a killing blow)
+  Plays specified files in BGKB.lua, need to add dynamic list creation. 
+  
