@@ -1,0 +1,28 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" 
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                   xsi:schemaLocation="http://www.blizzard.com/wow/ui/ 
+                   ..\..\FrameXML\UI.xsd">
+	<Script File="BGKB.lua"/>
+	<Frame name="BGKBFrame">
+		<Scripts>
+			<OnLoad>
+				self.TimeSinceLastUpdate = 0
+				HelloWorld();
+				self:RegisterEvent("PLAYER_PVP_KILLS_CHANGED");
+				self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED");
+				self:RegisterEvent("PLAYER_ENTERING_BATTLEGROUND");
+				self:RegisterEvent("PLAYER_DEAD");
+				self.RegisterEvent("PLAYER_PVP_KILLS_CHANGED");
+				<!-- self:RegisterEvent("") -->
+				GetSoundFiles();
+			</OnLoad>
+			<OnEvent>
+				EventHandler(self, event, ...);
+			</OnEvent>
+			<!-- <OnUpdate> -->
+				<!-- <OnUpdate function = "BGKB_OnUpdate"/> -->
+			<!-- </OnUpdate> -->
+
+		</Scripts>
+	</Frame>
+</Ui>
