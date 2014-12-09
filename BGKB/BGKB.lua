@@ -2,6 +2,7 @@
 UpdateInterval = 5
 KillCount = 0
 DeathCount = 0
+UpdateCount = 0
 InBG = 0
 KillSounds = {"shinji","ohgod","finnatry","fired","gameover","son"}
 DeathSounds = {"ha","hum","ogre"}
@@ -40,23 +41,36 @@ end
 
 function EventHandler(self, event, ...)
 	if InBG == 1 then
-		if event == "PLAYER_PVP_KILLS_CHANGED" then
-			print("Wrecked")
-		end
 		if event == "COMBAT_LOG_EVENT_UNFILTERED" then
 			CheckKillingBlow( ... )
 		end
 		if event == "PLAYER_DEAD" then
 			KillCount = 0
 			DeathCount = DeathCount + 1
-			local temp = RandSound(KillSounds)
-			temp = "Interface\\AddOns\\BGKB\\sound\\kills\\" .. DeathSounds[temp] .. ".mp3"
-			PlaySoundFile(temp)
+			print("Deathstreak: " .. DeathCount)
+			if DeathCount == 2 then
+				local temp = "Interface\\AddOns\\BGKB\\sound\\death\\" .. DeathStreakSounds[1] .. ".mp3"
+				PlaySoundFile(temp)
+			elseif DeathCount == 3 then
+				local temp = "Interface\\AddOns\\BGKB\\sound\\death\\" .. DeathStreakSounds[2] .. ".mp3"
+				PlaySoundFile(temp)
+			elseif DeathCount == 4 then
+				local temp = "Interface\\AddOns\\BGKB\\sound\\death\\" .. DeathStreakSounds[3] .. ".mp3"
+				PlaySoundFile(temp)
+			else
+				local temp = RandSound(KillSounds)
+				temp = "Interface\\AddOns\\BGKB\\sound\\death\\" .. DeathSounds[temp] .. ".mp3"
+				PlaySoundFile(temp)
+			end
 		end
 		if event == "PLAYER_PVP_KILLS_CHANGED" then
-			local temp = RandSound(KillSounds)
-			temp = "Interface\\AddOns\\BGKB\\sound\\kills\\" .. KillSounds[temp] .. ".mp3"
-			PlaySoundFile(temp)
+			UpdateCount = UpdateCount + 1
+			if(UpdateCount == 2) then
+				local temp = RandSound(KillSounds)
+				temp = "Interface\\AddOns\\BGKB\\sound\\kills\\" .. KillSounds[temp] .. ".mp3"
+				PlaySoundFile(temp)
+				UpdateCount = 0
+			end
 		end
 	end
 end
