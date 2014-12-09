@@ -7,21 +7,19 @@
 		<Scripts>
 			<OnLoad>
 				self.TimeSinceLastUpdate = 0
-				HelloWorld();
-				self:RegisterEvent("PLAYER_PVP_KILLS_CHANGED");
-				self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED");
-				self:RegisterEvent("PLAYER_ENTERING_BATTLEGROUND");
-				self:RegisterEvent("PLAYER_DEAD");
-				self.RegisterEvent("PLAYER_PVP_KILLS_CHANGED");
+				HelloWorld()
+				self:RegisterEvent("PLAYER_PVP_KILLS_CHANGED")
+				self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
+				self:RegisterEvent("PLAYER_DEAD")
+				self.RegisterEvent("PLAYER_PVP_KILLS_CHANGED")
 				<!-- self:RegisterEvent("") -->
-				GetSoundFiles();
+				GetSoundFiles()
 			</OnLoad>
+			<OnUpdate function="BGKB_OnUpdate"/>
 			<OnEvent>
-				EventHandler(self, event, ...);
+				EventHandler(self, event, ...)
 			</OnEvent>
-			<!-- <OnUpdate> -->
-				<!-- <OnUpdate function = "BGKB_OnUpdate"/> -->
-			<!-- </OnUpdate> -->
+			
 
 		</Scripts>
 	</Frame>
