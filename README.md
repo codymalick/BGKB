@@ -11,6 +11,10 @@ To Install:
 4. Check BGKB
 5. Login and have fun!
 
+Version .03
+Removed duplicated on pvp_kills_changed, added Deathstreak
+functionality, fixed death sounds. Added counter for pvp_kills_update
+because it was firing twice on one honorable kill.
 
 Version .02
 Added BG detection, activation and deactivation of mod sounds are now based on being in or out of a BG. 
