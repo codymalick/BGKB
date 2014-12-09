@@ -11,6 +11,11 @@ To Install:
 4. Check BGKB
 5. Login and have fun!
 
+
+Version .02
+Added BG detection, activation and deactivation of mod sounds are now based on being in or out of a BG. 
+Removed extra output to the console, added messages for entering and leaving BG.
+
 Version .01
 Basic Add-on functions work. On killing anything, sound clips play. Currently, no sound clips included in git. Planning on adding default game sounds for easy installation and use. 
 
