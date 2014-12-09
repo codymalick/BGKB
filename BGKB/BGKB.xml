@@ -19,8 +19,11 @@
 			<OnEvent>
 				EventHandler(self, event, ...)
 			</OnEvent>
-			
-
+		</Scripts>
+	</Frame>
+	<Frame name="InfoFrame">
+		<Scripts>
+			<!-- add frame/anchors here -->
 		</Scripts>
 	</Frame>
 </Ui>
