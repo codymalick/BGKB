@@ -1,4 +1,4 @@
-## Interface: 60000
+## Interface: 60200
 ## Title: BGKG
 ## Notes: Add-on that plays sound clips on killing blows, death, and humiliation
 BGKB.xml
