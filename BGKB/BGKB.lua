@@ -4,9 +4,15 @@ KillCount = 0
 DeathCount = 0
 UpdateCount = 0
 InBG = 0
-KillSounds = {"shinji","ohgod","finnatry","fired","gameover","son"}
-DeathSounds = {"ha","hum","ogre"}
-KillStreakSounds = {"doublekill2","triplekill","ultrakill","stoopid"}
+KillSounds = {"shinji","ohgod","finnatry","fired","gameover","son","Beautafull","DWaosdkasodk","Guesswho",
+	"Suckmycock","SurpriseMotherfucka","Wailingoweemon","Wangs","fabulous","fartsmeller","giveit","hkeftobemahd",
+	"itsocoo","makechange","ohhyeah.m4r","ooooOOo","thatsaten"}
+DeathSounds = {"ha","hum","ogre","big","Boo","FucksSake","Pissmeoff","Shitonthefess",
+	"UNACCEPTABLE","Whyyouhefftobemad","Youweregoodson","bigsmellywilly","cockjugglingthundercunt",
+	"fatherneverlovedme","gameover","hkeftobemehd","lillies","ohgod","parkcar","reacharound","shinji",
+	"son","thanksforshittingonme","whydoyoudothis","yoooo"}
+KillStreakSounds = {"doublekill2","triplekill","ultrakill","stoopid","HISNAMEISJOHNCENA","Ikilledfittymen",
+	"Mynigga","SuppriseButsecks","crystalfukinweed","datassistoofat","slamjam"}
 DeathStreakSounds = {"yo","yo2","yo3"}
 
 -- Functions
@@ -77,7 +83,7 @@ end
 
 function CheckKillingBlow( ... )
 	local ag1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 = ...
-	
+
 	if arg2 == "PARTY_KILL" and arg5 == UnitName("player") then
 		--Used for debugging which arg is which from combat log
 		-- print("Timestamp: ", arg1)
@@ -104,8 +110,8 @@ function CheckKillingBlow( ... )
 			temp = "Interface\\AddOns\\BGKB\\sound\\kills\\" .. KillSounds[temp] .. ".mp3"
 			PlaySoundFile(temp)
 		end
-		
-		print("Kill Streak: ", KillCount)	
+
+		print("Kill Streak: ", KillCount)
 	end
 end
 
@@ -126,8 +132,7 @@ end
 -- function GetSoundFiles()
 -- 	current_dir = io.popen"cd":read'*l'
 -- 	print(current_dir)
--- 	for file in io.popen([[dir ":\Program Files\"World of Warcraft"\Interface\AddOns\BGKB\sound\death" /b /ad]]) do 
+-- 	for file in io.popen([[dir ":\Program Files\"World of Warcraft"\Interface\AddOns\BGKB\sound\death" /b /ad]]) do
 -- 		print(file)
 -- 	end
 -- end
-
